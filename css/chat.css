@@ -1,0 +1,28 @@
+#bottombutton
+{
+    color: white;
+    float: right;
+    padding-top: 0.5%;
+    right: 2px; /*newly added*/
+    width: 20%;
+    text-align: center;
+}
+
+#mychat
+{
+    display:none;
+    position: fixed;
+
+    bottom:5%;
+    right: 2px; /*newly added*/
+    width: 20%;
+    height: 45%;
+    background-color: #EAF6FF;
+    color: black;
+    text-decoration: none;
+    font-size: 2.5vmin;
+    text-align: center;
+    z-index: 10;
+
+    border: 10px solid #2A2A72;
+}

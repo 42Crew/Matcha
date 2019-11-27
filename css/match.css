@@ -1,0 +1,48 @@
+#slider-age, #slider-localisation, #slider-popularite {
+    margin: 10px;
+}
+
+.ui-slider-horizontal {
+    height: 8px;
+    width: 200px;
+}
+
+input{
+    background-color: #EAF6FF;
+}
+
+#users
+{
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding:10px;
+}
+
+.user{
+    border: 1px solid #2A2A72;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    text-align: center;
+    clear: left;
+}
+
+.mytag.selected {
+   background-color: red;
+}
+
+#gestion{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    user-select: none;
+}
+
+.onefiltre{
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-left:1%;
+    float:left;
+}

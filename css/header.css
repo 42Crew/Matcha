@@ -1,0 +1,92 @@
+html, body {
+ margin:0;
+ padding:0;
+ }
+ 
+body{
+  background-color: #EAF6FF;
+
+}
+.header {
+  overflow: hidden;
+  background-color: #2A2A72;
+  top:0px;
+  padding: 1% 2%;
+}
+
+.header .list-nav {
+  float: left;
+  color: #EAF6FF;
+  text-align: center;
+  padding: 2vmin;
+  text-decoration: none;
+  font-size: 3vmin;
+  line-height: 3vmin;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.header .list-nav.logo {
+  font-size: 6vmin;
+  font-weight: bold;
+}
+
+.header .list-nav:hover {
+  background-color: rgb(51, 51, 138);
+}
+
+.header-right {
+  float: right;
+}
+
+#shownotif{
+  display:none;
+  float: right; 
+  padding-right: 0.8vmin;
+  padding-top: 0.8vmin;
+  margin-top: 0.5vmin;
+  background-color: #2A2A72;
+  color: #EAF6FF;
+  text-decoration: none;
+  font-size: 2.5vmin;
+  position: absolute; /*newly added*/
+  right: 5px; /*newly added*/
+  z-index: 10;
+}
+
+.notification > div{
+  padding: 2vmin;
+}
+
+#readall
+{
+  border: none;
+  color: #2A2A72;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vmin;
+  width: 15vmin;
+}
+
+.read
+{
+  border: none;
+  display: inline-block;
+  margin-right: 2vmin;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+
+#divreadall{
+  text-align: right;
+}
+
+#longueur{
+  margin-right: 5%;
+}
+
+#anotif{
+  text-decoration: none;
+  color: #EAF6FF;
+}

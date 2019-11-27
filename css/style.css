@@ -1,0 +1,8 @@
+  #tags > span{
+    cursor:pointer;
+    display:block;
+    float:left;
+    padding:5px;
+    padding-right:25px;
+    margin:4px;
+  }

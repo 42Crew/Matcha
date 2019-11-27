@@ -1,0 +1,72 @@
+ #vosinfos{
+    color: #950952;
+    font-size: 5.5vmin;
+    padding: 1%;
+    padding-left: 3%;
+    font-weight: bold;
+  }
+
+
+#changeprofile{
+    display: inline-block;
+    font-size: 2.5vmin;
+    max-width: 50%;
+}
+
+#rightside{
+    float: right;
+    width: 35%;
+    text-align: center;
+    padding-right: 10%;
+    font-size: 2.5vmin;
+    padding-top: 2%;
+}
+
+#rightside form{
+    padding-top: 2%;
+}
+
+.resize1{
+    margin: 2%;
+}
+
+.resize1 *{
+    font-size: 2vmin;
+    border:0;
+}
+
+.hidden{
+    display:none;
+}
+
+#uploadbutton {
+    display:inline-block;
+    color:#444;
+    border:1px solid #CCC;
+    background:#DDD;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+    vertical-align:middle;
+    max-width: 100px;
+    padding: 5px;
+    text-align: center;
+}
+#uploadbutton:active {
+    color:red;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+#galerie img{
+    float:left;
+    height: 180px;
+    width:23%;
+    margin: 1px;
+}
+
+.clear {
+    clear: left;
+  }
+
+.align{
+    margin-left: 2%;
+}
