@@ -6,11 +6,10 @@ if ($_SESSION['username'] != NULL)
     header("Location: ./match.php");
     return;
 }
-include_once '../templates/header.php';
+include '../templates/header.php';
 
 ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src='../javascript/getloca.js'></script>
 <script src='../javascript/tags.js'></script>
 <link rel="stylesheet" href="../css/style.css"/>
@@ -27,7 +26,7 @@ include_once '../templates/header.php';
     <br />
     Nom* : <input type="text" name="nom" value="" minlength=2 required>
     <br />
-    Mot de passe* : <input type="password" name="password" minlength=3 value="" required>
+    Mot de passe* : <input type="password" name="password" minlength=3 value="" required autocomplete>
     <br />
     <hr >
     Vous avez : <input type="number" name="age" min="18" max="100" value=""> ans

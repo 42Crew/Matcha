@@ -7,7 +7,7 @@ if (!$_GET['user'] || !$_SESSION['flag'])
     exit();
 }
 
-include_once '../templates/header.php';
+include '../templates/header.php';
 include '../functiondb/updateactivity.php';
 include '../functions/profileuserfunc.php';
 include '../functions/matchfunc.php';
@@ -35,7 +35,6 @@ $online = get_activity($val['flag']);
 
 ?>
 
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 <script src='../javascript/profileuser.js'></script>
 <link rel='stylesheet' href='../css/style.css'/>
 <link rel='stylesheet' href='../css/myprofil.css'/>

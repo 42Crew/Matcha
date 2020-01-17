@@ -6,7 +6,7 @@
         header("Location: ./match.php");
         exit();
     }
-    include_once '../templates/header.php';
+    include '../templates/header.php';
 ?>
 
 <link rel='stylesheet' href='../css/login.css'/>
@@ -21,7 +21,7 @@
         <div class='someinput'>
             Mot de passe
             <br/>
-            <input type="password" name="password" value="" required>
+            <input type="password" name="password" value="" required autocomplete>
         </div>
         <!-- <a href="./lostpw.php"> Lost password ?</a> -->
         <input type="submit" id="login-button" name="submit" value="Log in">

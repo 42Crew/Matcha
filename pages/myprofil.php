@@ -10,12 +10,11 @@ if (!$_SESSION['flag'])
 include '../functiondb/updateactivity.php';
 include '../functions/myprofilfunc.php';
 include '../functions/globalfunc.php';
-include_once '../templates/header.php';
+include '../templates/header.php';
 
 $val = getuserinfo();
 ?>
 
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 <script src='../javascript/tags.js'></script>
 <script src='../javascript/myprofile.js'></script>
 <script src='../javascript/getloca.js'></script>

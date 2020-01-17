@@ -10,7 +10,7 @@ if (!$_SESSION['flag'])
 include '../functiondb/updateactivity.php';
 include '../functions/matchfunc.php';
 include '../functions/globalfunc.php';
-include_once '../templates/header.php';
+include '../templates/header.php';
 
 $val = getuserinfo();
 if (!isset($_SESSION['error']))
