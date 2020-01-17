@@ -76,6 +76,7 @@ $val = getuserinfo();
         </div>
         <div class='resize1'><input type='submit' name='submit' value='Modifier mes informations'></div>
     </form>
+    <a class='resize1' href="./changepass.php" class='list-nav'>Changer son mot de passe</a>
 </div>
 
 <div id='rightside'>

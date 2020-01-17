@@ -13,19 +13,19 @@
 
 <div id='main'>
     <form action="../functiondb/connect.php" method="POST">
-        <div class='someinput'>
+        <div>
             E-mail
             <br/>
             <input type="text" name="mail" value="" required>
         </div>
-        <div class='someinput'>
+        <div>
             Mot de passe
             <br/>
             <input type="password" name="password" value="" required autocomplete>
         </div>
-        <!-- <a href="./lostpw.php"> Lost password ?</a> -->
         <input type="submit" id="login-button" name="submit" value="Log in">
     </form>
+    <center><a class='resize1' href="./changepass.php" class='list-nav'>Mot de passe perdu ?</a></center>
     <?php
         if (isset($_SESSION['error'])){
             echo $_SESSION['error'];
