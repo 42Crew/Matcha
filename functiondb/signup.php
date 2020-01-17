@@ -1,6 +1,7 @@
 <?php 
     session_start();
     include_once '../config/database.php';
+    include_once '../functiondb/mail.php';
 
     $mail = strtolower($_POST['email']);
     $username = $_POST['username'];
@@ -45,7 +46,8 @@
         ':flag' => $flag, ':nom' => $nom, ':prenom' => $prenom,  ':age' => $_POST['age'], ':genre' => $_POST['genre'], 
         ':interet' => $_POST['interet'], ':bio' => $_POST['bio'], ':tag' => $_POST['tag'], ':localisation' => $_POST['geoloc']));
 
-
+        $url = $_SERVER['HTTP_HOST'] . str_replace("/signup.php", "", $_SERVER['REQUEST_URI']);
+        send_verification_email($mail, $username, $flag, $url);
         $_SESSION['signup_success'] = true;
         header("Location: ../pages/signupform.php");
         return (0);

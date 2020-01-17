@@ -65,9 +65,8 @@ function display()
     for (var i = 0; i < tab.length; i++) {
       if (matchtag.includes(tab[i]) == false) affichage = false;
     }
-
     if ((age >= sliderage[0] && age <= sliderage[1]) 
-        && (distance >= sliderloc[0] && distance <= sliderloc[1])
+        && (Math.round(distance) >= sliderloc[0] && Math.round(distance) <= sliderloc[1])
         && (popularite >= sliderpop[0] && popularite <= sliderpop[1]) && affichage == true)
         $(this).css('display', 'block');
     else

@@ -122,9 +122,4 @@ function changedivs()
     });  
 }
 
-function updateChat()
-{
-    changedivs();
-}
-
-setInterval("updateChat()",3000);
+setInterval("changedivs()",3000);

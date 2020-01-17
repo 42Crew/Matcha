@@ -73,17 +73,17 @@ if (count($matchs) <= 0)
 
         <div class='onefiltre'>
             <label>Distance:</label>
-            <input type='hidden' name='maxdistance' value='<?php echo round(end($matchs)['distance']);?>'>
-            <input type='hidden' id='locavalues' value='0,<?php echo round(end($matchs)['distance']);?>'>
-            <input type="text" id="localisation" readonly style="border:0; color:#f6931f; font-weight:bold;" value="0 km - <?php echo round(end($matchs)['distance']);?> km">
+            <input type='hidden' name='maxdistance' value='<?php echo (round(max(array_column($matchs, 'distance'))));?>'>
+            <input type='hidden' id='locavalues' value='0,<?php echo (round(max(array_column($matchs, 'distance'))));?>'>
+            <input type="text" id="localisation" readonly style="border:0; color:#f6931f; font-weight:bold;" value="0 km - <?php echo (round(max(array_column($matchs, 'distance'))));?> km">
             <div id="slider-localisation"></div>
         </div>
-
+        <?php echo $matchs['popularite'] ;?>
         <div class='onefiltre'>
             <label>Popularite:</label>
-            <input type='hidden' name='popularite' value='<?php echo max($matchs)['popularite'] ;?>'>
-            <input type='hidden' id='popvalues' value='0,<?php echo max($matchs)['popularite'] ;?>'>
-            <input type="text" id="popularite" readonly style="border:0; color:#f6931f; font-weight:bold;" value="0 points - <?php echo max($matchs)['popularite'];?> points">
+            <input type='hidden' name='popularite' value='<?php echo (max(array_column($matchs, 'popularite')));?>'>
+            <input type='hidden' id='popvalues' value='0,<?php echo (max(array_column($matchs, 'popularite')));?>'>
+            <input type="text" id="popularite" readonly style="border:0; color:#f6931f; font-weight:bold;" value="0 points - <?php echo (max(array_column($matchs, 'popularite')));?> points">
             <div id="slider-popularite"></div>
         </div>
 
