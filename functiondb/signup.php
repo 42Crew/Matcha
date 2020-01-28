@@ -3,11 +3,14 @@
     include_once '../config/database.php';
     include_once '../functiondb/mail.php';
 
-    $mail = strtolower($_POST['email']);
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
+    $mail = htmlspecialchars(strtolower($_POST['email']));
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
+    $nom = htmlspecialchars($_POST['nom']);
+    $prenom = htmlspecialchars($_POST['prenom']);
+    $age = htmlspecialchars($_POST['age']);
+    $bio = htmlspecialchars($_POST['bio']);
+    $tag = htmlspecialchars($_POST['tag']);
     $_SESSION['error'] = null;
 
     if ($mail == "" || $mail == null || $username == "" || $username == null || $password == "" || $password == null || $nom == "" || $nom == null || $prenom == "" || $prenom == null) {
@@ -20,8 +23,8 @@
         header("Location: ../pages/signupform.php");
         return;
     }
-    if ($_POST['age'] == "")
-        $_POST['age'] = null;
+    if ($age == "")
+        $age = null;
     if ($_POST['genre'] == "")
         $_POST['genre'] = "Non renseigne";
     if ($_POST['interet'] == "")
@@ -43,8 +46,8 @@
         $flag = uniqid(rand(), true);
 
         $query->execute(array(':username' => $username, ':mail' => $mail, ':password' => $password, 
-        ':flag' => $flag, ':nom' => $nom, ':prenom' => $prenom,  ':age' => $_POST['age'], ':genre' => $_POST['genre'], 
-        ':interet' => $_POST['interet'], ':bio' => $_POST['bio'], ':tag' => $_POST['tag'], ':localisation' => $_POST['geoloc']));
+        ':flag' => $flag, ':nom' => $nom, ':prenom' => $prenom,  ':age' => $age, ':genre' => $_POST['genre'], 
+        ':interet' => $_POST['interet'], ':bio' => $bio, ':tag' => $_POST['tag'], ':localisation' => $_POST['geoloc']));
 
         $url = $_SERVER['HTTP_HOST'] . str_replace("/signup.php", "", $_SERVER['REQUEST_URI']);
         send_verification_email($mail, $username, $flag, $url);

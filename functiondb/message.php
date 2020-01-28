@@ -11,7 +11,7 @@ include './notification.php';
 
 $id = intval($_POST['id']);
 $flag = $_SESSION['flag'];
-$message = $_POST['message'];
+$message = htmlspecialchars($_POST['message']);
 
 try {
     $bdd = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);

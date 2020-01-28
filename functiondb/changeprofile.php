@@ -13,6 +13,12 @@ if(!filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
 }
     include_once '../config/database.php';
   
+    $mail = htmlspecialchars($_POST['mail']);
+    $prenom = htmlspecialchars($_POST['prenom']);
+    $nom = htmlspecialchars($_POST['nom']);
+    $age = htmlspecialchars($_POST['age']);
+    $bio = htmlspecialchars($_POST['bio']);
+    $tag = htmlspecialchars($_POST['tag']);
     try {
         $bdd = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -28,8 +34,8 @@ if(!filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
         $query->closeCursor();
         print_r($val);
         $query= $bdd->prepare("UPDATE users SET mail=:mail, prenom=:prenom, nom=:nom, age=:age, genre=:genre, interet=:interet, bio=:bio, tag=:tag, localisation=:localisation WHERE flag=:flag");
-        $query->execute(array(':mail' => $_POST['mail'], ':prenom' => $_POST['prenom'], 'nom' => $_POST['nom'], 'age' => $_POST['age'], 'genre' => $_POST['genre'], 
-        'interet' => $_POST['interet'], 'bio' => $_POST['bio'], 'tag' => $_POST['tag'], 'localisation' => $_POST['geoloc'], 
+        $query->execute(array(':mail' => $mail, ':prenom' => $prenom, 'nom' => $nom, 'age' => $age, 'genre' => $_POST['genre'], 
+        'interet' => $_POST['interet'], 'bio' => $bio, 'tag' => $tag, 'localisation' => $_POST['geoloc'], 
         ':flag' => $_SESSION['flag']));
         $_SESSION['change_success'] = true;
         header("Location: ../pages/myprofil.php");
